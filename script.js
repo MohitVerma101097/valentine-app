@@ -3,9 +3,15 @@ const question = document.querySelector(".question");
 const gif = document.querySelector(".gif");
 const yesBtn = document.querySelector(".yes-btn");
 const noBtn = document.querySelector(".no-btn");
+const styleBg = document.querySelector("body")
+
+/*const bgChange = () => {
+  styleBg.style.background = "url('https://cliply.co/wp-content/uploads/2020/01/402001120_PAPER_HEARTS_400px.gif') no-repeat cover";
+};*/
 
 yesBtn.addEventListener("click", () => {
   playSound(); 
+  /* bgChange() */
   question.innerHTML = "Yay, see you on the 14th!";
   gif.src =
     "https://media.giphy.com/media/UMon0fuimoAN9ueUNP/giphy.gif";
@@ -26,5 +32,6 @@ noBtn.addEventListener("mouseover", () => {
 
 const playSound = () => {
   let audio = new Audio("videoplayback.mp3");
+  audio.loop = true;
   audio.play();
 };
