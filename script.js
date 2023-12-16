@@ -5,13 +5,16 @@ const yesBtn = document.querySelector(".yes-btn");
 const noBtn = document.querySelector(".no-btn");
 const styleBg = document.querySelector("body")
 
-/*const bgChange = () => {
-  styleBg.style.background = "url('https://cliply.co/wp-content/uploads/2020/01/402001120_PAPER_HEARTS_400px.gif') no-repeat cover";
-};*/
+const bgChange = () => {
+  console.log("Changing background");
+  styleBg.style.background = "url('https://img1.picmix.com/output/stamp/normal/4/6/2/4/2354264_59fd3.gif')";
+  styleBg.style.backgroundSize = "cover";
+};
+
 
 yesBtn.addEventListener("click", () => {
   playSound(); 
-  /* bgChange() */
+  bgChange();
   question.innerHTML = "Yay, see you on the 14th!";
   gif.src =
     "https://media.giphy.com/media/UMon0fuimoAN9ueUNP/giphy.gif";
@@ -32,6 +35,5 @@ noBtn.addEventListener("mouseover", () => {
 
 const playSound = () => {
   let audio = new Audio("videoplayback.mp3");
-  audio.loop = true;
   audio.play();
 };
